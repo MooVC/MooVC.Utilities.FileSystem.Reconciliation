@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MooVC.Utilities.FileSystem.Reconciliation", "MooVC.Utilities.FileSystem.Reconciliation\MooVC.Utilities.FileSystem.Reconciliation.csproj", "{6FA10F7A-E4D2-4AAA-9204-B8DBB7D82043}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3D46195A-B405-4AD8-A7D6-20587B294A22}"
+	ProjectSection(SolutionItems) = preProject
+		..\.editorconfig = ..\.editorconfig
+		..\.gitignore = ..\.gitignore
+		..\.runsettings = ..\.runsettings
+		..\azure-pipelines.yml = ..\azure-pipelines.yml
+		..\directory.build.props = ..\directory.build.props
+		..\LICENSE = ..\LICENSE
+		..\nuget.config = ..\nuget.config
+		..\README.md = ..\README.md
+		..\analyzers\stylecop.code.ruleset = ..\analyzers\stylecop.code.ruleset
+		..\analyzers\stylecop.tests.ruleset = ..\analyzers\stylecop.tests.ruleset
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MooVC.Utilities.FileSystem.Reconciliation.Tests", "MooVC.Utilities.FileSystem.Reconciliation.Tests\MooVC.Utilities.FileSystem.Reconciliation.Tests.csproj", "{2AAAA106-F56B-4F89-B266-3A35C5BDA023}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6FA10F7A-E4D2-4AAA-9204-B8DBB7D82043}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FA10F7A-E4D2-4AAA-9204-B8DBB7D82043}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FA10F7A-E4D2-4AAA-9204-B8DBB7D82043}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FA10F7A-E4D2-4AAA-9204-B8DBB7D82043}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AAAA106-F56B-4F89-B266-3A35C5BDA023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AAAA106-F56B-4F89-B266-3A35C5BDA023}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AAAA106-F56B-4F89-B266-3A35C5BDA023}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AAAA106-F56B-4F89-B266-3A35C5BDA023}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {368B7870-4C06-455D-A927-43E5D05781FB}
+	EndGlobalSection
+EndGlobal
