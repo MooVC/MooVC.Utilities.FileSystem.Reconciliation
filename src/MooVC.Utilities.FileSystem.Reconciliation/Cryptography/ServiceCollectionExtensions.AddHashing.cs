@@ -8,7 +8,7 @@ internal static partial class ServiceCollectionExtensions
     public static IServiceCollection AddHashing(this IServiceCollection services)
     {
         return services
-            .AddSingleton<HashAlgorithm, HMACMD5>()
+            .AddSingleton<HashAlgorithm>(_ => MD5.Create())
             .AddSingleton<IHashingService, HashingService>();
     }
 }

@@ -55,20 +55,9 @@ public sealed class WhenRegisterIsCalled
 
         // Assert
 
-        _ = command
-            .Arguments
-            .Should()
-            .Contain(argument => argument.Name == "local");
-
-        _ = command
-            .Arguments
-            .Should()
-            .Contain(argument => argument.Name == "remote");
-
-        _ = command
-            .Arguments
-            .Should()
-            .Contain(argument => argument.Name == "output");
+        _ = command.Arguments.Should().Contain(argument => argument.Name == "local");
+        _ = command.Arguments.Should().Contain(argument => argument.Name == "remote");
+        _ = command.Arguments.Should().Contain(argument => argument.Name == "output");
     }
 
     [Fact(DisplayName = "Given a null application, Then ArgumentNullException is thrown.")]

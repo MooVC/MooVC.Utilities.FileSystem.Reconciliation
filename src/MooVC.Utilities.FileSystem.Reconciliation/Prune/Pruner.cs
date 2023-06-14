@@ -67,7 +67,7 @@ internal sealed class Pruner
     {
         ulong missed = 0;
 
-        foreach (Resource resource in resources.Skip(1))
+        foreach (Resource resource in resources)
         {
             try
             {

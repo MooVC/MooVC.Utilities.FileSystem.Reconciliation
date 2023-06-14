@@ -21,20 +21,9 @@ public sealed class WhenMatchIsConstructed
 
         // Assert
 
-        _ = match
-            .Local
-            .Should()
-            .Be(local);
-
-        _ = match
-            .Remotes
-            .Should()
-            .BeEmpty();
-
-        _ = match
-            .HasMatches
-            .Should()
-            .BeFalse();
+        _ = match.Local.Should().Be(local);
+        _ = match.Remotes.Should().BeEmpty();
+        _ = match.HasMatches.Should().BeFalse();
     }
 
     [Fact(DisplayName = "Given a local resource and a non-empty remote list, Then the object is constructed successfully and HasMatches is true.")]
@@ -56,19 +45,8 @@ public sealed class WhenMatchIsConstructed
 
         // Assert
 
-        _ = match
-            .Local
-            .Should()
-            .Be(local);
-
-        _ = match
-            .Remotes
-            .Should()
-            .BeEquivalentTo(remotes);
-
-        _ = match
-            .HasMatches
-            .Should()
-            .BeTrue();
+        _ = match.Local.Should().Be(local);
+        _ = match.Remotes.Should().BeEquivalentTo(remotes);
+        _ = match.HasMatches.Should().BeTrue();
     }
 }

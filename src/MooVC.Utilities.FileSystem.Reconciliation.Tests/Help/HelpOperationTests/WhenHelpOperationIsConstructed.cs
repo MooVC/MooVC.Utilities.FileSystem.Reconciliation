@@ -26,9 +26,7 @@ public sealed class WhenHelpOperationIsConstructed
 
         // Assert
 
-        _ = construct
-            .Should()
-            .NotThrow();
+        _ = construct.Should().NotThrow();
     }
 
     [Fact(DisplayName = "Given a null ILogger, Then an ArgumentNullException is thrown.")]
@@ -44,8 +42,6 @@ public sealed class WhenHelpOperationIsConstructed
 
         // Assert
 
-        _ = act
-            .Should()
-            .Throw<ArgumentNullException>();
+        _ = act.Should().Throw<ArgumentNullException>();
     }
 }

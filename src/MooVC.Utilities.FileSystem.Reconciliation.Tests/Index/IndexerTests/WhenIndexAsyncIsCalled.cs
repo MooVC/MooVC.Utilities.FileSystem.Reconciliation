@@ -63,30 +63,14 @@ public sealed class WhenIndexAsyncIsCalled
 
         // Assert
 
-        _ = result
-            .Should()
-            .NotBeNull();
-
-        _ = result
-            .Should()
-            .HaveCount(1);
+        _ = result.Should().NotBeNull();
+        _ = result.Should().HaveCount(1);
 
         Resource resource = result.First();
 
-        _ = resource
-            .Name
-            .Should()
-            .Be(Name);
-
-        _ = resource
-            .Type
-            .Should()
-            .Be(Type);
-
-        _ = resource
-            .Path
-            .Should()
-            .Be(file.FullName);
+        _ = resource.Name.Should().Be(Name);
+        _ = resource.Type.Should().Be(Type);
+        _ = resource.Path.Should().Be(file.FullName);
     }
 
     [Fact(DisplayName = "Given a null directory, Then an ArgumentNullException is thrown.")]
@@ -103,9 +87,7 @@ public sealed class WhenIndexAsyncIsCalled
 
         // Assert
 
-        _ = await act
-            .Should()
-            .ThrowAsync<ArgumentNullException>();
+        _ = await act.Should().ThrowAsync<ArgumentNullException>();
     }
 
     [Theory(DisplayName = "Given a valid directory and search pattern, Then the search pattern is propagated to the file system.")]
@@ -182,19 +164,8 @@ public sealed class WhenIndexAsyncIsCalled
 
         // Assert
 
-        _ = result
-            .Should()
-            .NotBeNull();
-
-        _ = result
-            .Should()
-            .HaveCount(1);
-
-        _ = result
-            .First()
-            .Id
-            .ToByteArray()
-            .Should()
-            .BeEquivalentTo(expectedHash);
+        _ = result.Should().NotBeNull();
+        _ = result.Should().HaveCount(1);
+        _ = result.First().Id.ToByteArray().Should().BeEquivalentTo(expectedHash);
     }
 }

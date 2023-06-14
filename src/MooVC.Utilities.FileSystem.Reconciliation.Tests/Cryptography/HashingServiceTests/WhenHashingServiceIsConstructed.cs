@@ -33,9 +33,7 @@ public sealed class WhenHashingServiceIsConstructed
 
         // Assert
 
-        _ = construct
-            .Should()
-            .NotThrow();
+        _ = construct.Should().NotThrow();
     }
 
     [Fact(DisplayName = "Given a null algorithm, Then an ArgumentNullException is thrown.")]
@@ -51,9 +49,7 @@ public sealed class WhenHashingServiceIsConstructed
 
         // Assert
 
-        _ = act
-            .Should()
-            .Throw<ArgumentNullException>();
+        _ = act.Should().Throw<ArgumentNullException>();
     }
 
     [Fact(DisplayName = "Given a null file system, Then an ArgumentNullException is thrown.")]
@@ -69,9 +65,7 @@ public sealed class WhenHashingServiceIsConstructed
 
         // Assert
 
-        _ = act
-            .Should()
-            .Throw<ArgumentNullException>();
+        _ = act.Should().Throw<ArgumentNullException>();
     }
 
     [Fact(DisplayName = "Given an invalid buffer size, Then an ArgumentOutOfRangeException is thrown.")]
@@ -87,8 +81,6 @@ public sealed class WhenHashingServiceIsConstructed
 
         // Assert
 
-        _ = act
-            .Should()
-            .Throw<ArgumentOutOfRangeException>();
+        _ = act.Should().Throw<ArgumentOutOfRangeException>();
     }
 }

@@ -28,10 +28,7 @@ public sealed class WhenRegisterIsCalled
 
         // Assert
 
-        _ = application
-            .Commands
-            .Should()
-            .Contain(cmd => cmd.Name == "prune");
+        _ = application.Commands.Should().Contain(cmd => cmd.Name == "prune");
     }
 
     [Fact(DisplayName = "Given an application, Then the command arguments are configured correctly.")]
@@ -63,13 +60,8 @@ public sealed class WhenRegisterIsCalled
 
         // Assert
 
-        _ = local
-            .Should()
-            .NotBeNull();
-
-        _ = output
-            .Should()
-            .NotBeNull();
+        _ = local.Should().NotBeNull();
+        _ = output.Should().NotBeNull();
     }
 
     [Fact(DisplayName = "Given a null application, Then ArgumentNullException is thrown.")]

@@ -24,9 +24,7 @@ public sealed class WhenMatchOperationIsConstructed
 
         // Assert
 
-        _ = construct
-            .Should()
-            .NotThrow();
+        _ = construct.Should().NotThrow();
     }
 
     [Fact(DisplayName = "Given a null logger, Then an ArgumentNullException is thrown.")]

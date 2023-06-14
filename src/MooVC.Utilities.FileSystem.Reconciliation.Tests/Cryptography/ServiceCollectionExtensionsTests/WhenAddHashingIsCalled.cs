@@ -19,7 +19,6 @@ public sealed class WhenAddHashingIsCalled
 
         // Assert
 
-        _ = services.Defines<HashAlgorithm, HMACMD5>();
         _ = services.Defines<IHashingService, HashingService>();
     }
 }

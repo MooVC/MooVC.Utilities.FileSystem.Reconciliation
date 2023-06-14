@@ -49,13 +49,8 @@ public sealed class WhenComputeHashAsyncIsCalled
 
         // Assert
 
-        _ = result
-            .Should()
-            .NotBeNull();
-
-        _ = result
-            .Should()
-            .BeEquivalentTo(SHA256.HashData(data));
+        _ = result.Should().NotBeNull();
+        _ = result.Should().BeEquivalentTo(SHA256.HashData(data));
     }
 
     [Fact(DisplayName = "Given a cancelled operation, Then a TaskCanceledException is thrown.")]

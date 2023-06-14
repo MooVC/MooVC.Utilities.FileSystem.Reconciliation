@@ -30,9 +30,7 @@ public sealed class WhenIndexOperationIsConstructed
 
         // Assert
 
-        _ = construct
-            .Should()
-            .NotThrow();
+        _ = construct.Should().NotThrow();
     }
 
     [Fact(DisplayName = "Given a null indexer, Then an ArgumentNullException is thrown.")]
@@ -48,9 +46,7 @@ public sealed class WhenIndexOperationIsConstructed
 
         // Assert
 
-        _ = act
-            .Should()
-            .Throw<ArgumentNullException>();
+        _ = act.Should().Throw<ArgumentNullException>();
     }
 
     [Fact(DisplayName = "Given a null logger, Then an ArgumentNullException is thrown.")]
@@ -66,9 +62,7 @@ public sealed class WhenIndexOperationIsConstructed
 
         // Assert
 
-        _ = act
-            .Should()
-            .Throw<ArgumentNullException>();
+        _ = act.Should().Throw<ArgumentNullException>();
     }
 
     [Fact(DisplayName = "Given a null store, Then an ArgumentNullException is thrown.")]
@@ -84,8 +78,6 @@ public sealed class WhenIndexOperationIsConstructed
 
         // Assert
 
-        _ = act
-            .Should()
-            .Throw<ArgumentNullException>();
+        _ = act.Should().Throw<ArgumentNullException>();
     }
 }

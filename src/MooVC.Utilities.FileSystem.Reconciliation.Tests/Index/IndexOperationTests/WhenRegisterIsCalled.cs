@@ -56,25 +56,10 @@ public sealed class WhenRegisterIsCalled
 
         // Assert
 
-        _ = command
-            .Arguments
-            .Should()
-            .Contain(argument => argument.Name == "source");
-
-        _ = command
-            .Arguments
-            .Should()
-            .Contain(argument => argument.Name == "output");
-
-        _ = command
-            .Options
-            .Should()
-            .Contain(option => option.Template == "-p|--pattern");
-
-        _ = command
-            .Options
-            .Should()
-            .Contain(option => option.Template == "-o|--option");
+        _ = command.Arguments.Should().Contain(argument => argument.Name == "source");
+        _ = command.Arguments.Should().Contain(argument => argument.Name == "output");
+        _ = command.Options.Should().Contain(option => option.Template == "-p|--pattern");
+        _ = command.Options.Should().Contain(option => option.Template == "-o|--option");
     }
 
     [Fact(DisplayName = "Given a null application, Then ArgumentNullException is thrown.")]

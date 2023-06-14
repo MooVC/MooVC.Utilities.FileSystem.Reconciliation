@@ -25,9 +25,7 @@ public sealed class WhenPruneOperationIsConstructed
 
         // Assert
 
-        _ = act
-            .Should()
-            .NotThrow();
+        _ = act.Should().NotThrow();
     }
 
     [Fact(DisplayName = "Given a null logger, Then ArgumentNullException is thrown.")]

@@ -35,30 +35,13 @@ public sealed class WhenMatchAsyncIsCalled
 
         // Assert
 
-        _ = matches
-            .Should()
-            .NotBeNullOrEmpty()
-            .And
-            .HaveCount(local.Count);
+        _ = matches.Should().NotBeNullOrEmpty().And.HaveCount(local.Count);
 
         foreach (Match match in matches)
         {
-            _ = match
-                .Local
-                .Should()
-                .BeOneOf(local);
-
-            _ = match
-                .Remotes
-                .Should()
-                .NotBeNullOrEmpty()
-                .And
-                .ContainSingle();
-
-            _ = match
-                .HasMatches
-                .Should()
-                .BeTrue();
+            _ = match.Local.Should().BeOneOf(local);
+            _ = match.Remotes.Should().NotBeNullOrEmpty().And.ContainSingle();
+            _ = match.HasMatches.Should().BeTrue();
         }
     }
 
@@ -87,28 +70,13 @@ public sealed class WhenMatchAsyncIsCalled
 
         // Assert
 
-        _ = matches
-            .Should()
-            .NotBeNull()
-            .And
-            .HaveCount(local.Count);
+        _ = matches.Should().NotBeNull().And.HaveCount(local.Count);
 
         foreach (Match match in matches)
         {
-            _ = match
-                .Local
-                .Should()
-                .BeOneOf(local);
-
-            _ = match
-                .Remotes
-                .Should()
-                .BeEmpty();
-
-            _ = match
-                .HasMatches
-                .Should()
-                .BeFalse();
+            _ = match.Local.Should().BeOneOf(local);
+            _ = match.Remotes.Should().BeEmpty();
+            _ = match.HasMatches.Should().BeFalse();
         }
     }
 
@@ -132,11 +100,7 @@ public sealed class WhenMatchAsyncIsCalled
 
         // Assert
 
-        _ = matches
-            .Should()
-            .NotBeNull()
-            .And
-            .BeEmpty();
+        _ = matches.Should().NotBeNull().And.BeEmpty();
     }
 
     [Fact(DisplayName = "Given null local resources, Then an empty set of matches is returned.")]
@@ -159,11 +123,7 @@ public sealed class WhenMatchAsyncIsCalled
 
         // Assert
 
-        _ = matches
-            .Should()
-            .NotBeNull()
-            .And
-            .BeEmpty();
+        _ = matches.Should().NotBeNull().And.BeEmpty();
     }
 
     [Fact(DisplayName = "Given empty remote resources, Then no matches are returned.")]
@@ -187,28 +147,13 @@ public sealed class WhenMatchAsyncIsCalled
 
         // Assert
 
-        _ = matches
-            .Should()
-            .NotBeNull()
-            .And
-            .HaveCount(local.Count);
+        _ = matches.Should().NotBeNull().And.HaveCount(local.Count);
 
         foreach (Match match in matches)
         {
-            _ = match
-                .Local
-                .Should()
-                .BeOneOf(local);
-
-            _ = match
-                .Remotes
-                .Should()
-                .BeEmpty();
-
-            _ = match
-                .HasMatches
-                .Should()
-                .BeFalse();
+            _ = match.Local.Should().BeOneOf(local);
+            _ = match.Remotes.Should().BeEmpty();
+            _ = match.HasMatches.Should().BeFalse();
         }
     }
 
@@ -233,28 +178,13 @@ public sealed class WhenMatchAsyncIsCalled
 
         // Assert
 
-        _ = matches
-            .Should()
-            .NotBeNull()
-            .And
-            .HaveCount(local.Count);
+        _ = matches.Should().NotBeNull().And.HaveCount(local.Count);
 
         foreach (Match match in matches)
         {
-            _ = match
-                .Local
-                .Should()
-                .BeOneOf(local);
-
-            _ = match
-                .Remotes
-                .Should()
-                .BeEmpty();
-
-            _ = match
-                .HasMatches
-                .Should()
-                .BeFalse();
+            _ = match.Local.Should().BeOneOf(local);
+            _ = match.Remotes.Should().BeEmpty();
+            _ = match.HasMatches.Should().BeFalse();
         }
     }
 }

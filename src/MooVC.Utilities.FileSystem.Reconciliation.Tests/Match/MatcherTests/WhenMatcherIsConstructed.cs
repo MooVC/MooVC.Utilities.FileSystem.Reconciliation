@@ -15,8 +15,6 @@ public sealed class WhenMatcherIsConstructed
 
         // Assert
 
-        _ = construct
-            .Should()
-            .NotThrow();
+        _ = construct.Should().NotThrow();
     }
 }

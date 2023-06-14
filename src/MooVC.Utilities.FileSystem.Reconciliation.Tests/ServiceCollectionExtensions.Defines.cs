@@ -19,19 +19,9 @@ internal static partial class ServiceCollectionExtensions
     {
         ServiceDescriptor? descriptor = services.SingleOrDefault(descriptor => descriptor.ServiceType == typeof(TService));
 
-        _ = descriptor
-            .Should()
-            .NotBeNull();
-
-        _ = descriptor!
-            .Lifetime
-            .Should()
-            .Be(lifetime);
-
-        _ = descriptor
-            .ImplementationType
-            .Should()
-            .Be<TImplementation>();
+        _ = descriptor.Should().NotBeNull();
+        _ = descriptor!.Lifetime.Should().Be(lifetime);
+        _ = descriptor.ImplementationType.Should().Be<TImplementation>();
 
         return services;
     }
